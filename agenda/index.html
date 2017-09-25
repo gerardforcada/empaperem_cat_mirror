@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ca_ES">
+    <head>
+        <title>Agenda d'empaperades</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Organitza't i surt a empaperar els carrers del municipi de llibertat">
+        <meta property="og:locale" content="ca_ES">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Agenda d'empaperades">
+        <meta property="og:description" content="Organitza't i surt a empaperar els carrers del municipi de llibertat" />
+        <meta property="og:url" content="/agenda">
+        <meta property="og:site_name" content="Empaperem">
+        <meta property="og:image" content="/gentempaperant.jpg">
+        <meta property="og:image:width" content="704" />
+        <meta property="og:image:height" content="428" />
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@empaperem">
+        <meta name="twitter:title" content="Agenda d'empaperades">
+        <meta name="twitter:description" content="Organitza't i surt a empaperar els carrers del municipi de llibertat">
+        <meta name="twitter:image" content="/gentempaperant.jpg">
+        <link rel="icon" href="/printer.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:900" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+        <link rel="stylesheet" href="/main.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106544996-2"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)};
+        gtag('js', new Date());
+        gtag('config', 'UA-106544996-2');
+        </script>
+    </head>
+    <body id="cartells">
+        <main class="wrapper">
+            
+            <nav class="navigation">
+                <section class="container">
+                    <a class="navigation-title" href="/">
+                    <h1 class="title">#Empaperem</h1> </a>
+                    <ul class="navigation-list float-right">
+                        <li class="navigation-item"><a class="navigation-link" href="/agenda">Agenda</a> </li>
+                        <li class="navigation-item"><a class="navigation-link" href="/cartells">Cartells</a></li>
+                    </ul>
+                </section>
+            </nav>
+            <header class="header" id="home">
+                <section class="container">
+                    <h1 class="title">Agenda d'empaperades</h1>
+                    <p class="description">Empapera els carrers de llibertat</p>
+                </section>
+            </header>
+
+
+
+            <section class="container bg" id="utilities">
+
+            <h1>Ben aviat tindràs noves notícies nostres</h1>
+
+</section>
+
+            
+            <section class="container bg" id="utilities" style="display: none">
+                
+                <h3><code id="compta"></code> empaperades actives!</h3>
+                
+                <p style="margin-bottom:30px">Aquí teniu una agenda centralitzada i actualitzada de les <code id="comptador">43</code> accions convocades a través d'<a href="https://twitter.com/search?src=typd&q=%23empaperem" style="color: #1c94e0;font-weight: 900;">#empaperem</a> arreu del territori. Envieu-nos un DM al compte de Twitter <a href="https://twitter.com/empaperem" style="color: #1c94e0;-weight: 900;">@empaperem</a> si voleu informar-nos d'una crida i que quedi recollida en aquesta agenda o feu click al botó inferior per enviar les dades via formulari:</p>
+
+                <div style="text-align: center; margin-bottom: 60px">
+                    <a class="button" id="buttonmodal">Envia'ns les dades per formulari</a>
+                </div>
+
+
+                <div class="only-mobile" style="text-align: center;border: 1px solid #000;padding-top: 36px; padding-left:20px; padding-right:20px;padding-bottom: 10px;width: 90%;margin: 0 auto;margin-top: 30px; margin-bottom: 60px">
+                    <h5><strong>Fem-ho córrer!</strong></h5>
+                    <p>En aquests moments teva implicació és <strong>essencial</strong>. Clicka a "PASSA-HO" per enviar les convocatòries per Whatsapp.</p>
+                    
+                </div>
+
+
+
+
+
+
+
+                
+                
+                <table id="taulas" class="taula">
+                    <thead>
+                        <tr>
+                            <th>Municipi</th>
+                            <th>Lloc</th>
+                            <th>Data</th>
+                            <th>Hora</th>
+                        <th> </th>
+                        <th> </th>                     
+                        </tr>
+                    </thead>
+                    <tfoot style="display: none">
+                    <tr>
+                        <th>Municipi</th>
+                        <th>Lloc</th>
+                        <th>Hora</th>
+                        <th>Data</th>
+                        <th> </th>
+                        <th> </th>
+                    </tr>
+                    </tfoot>
+                </table>
+            </section>
+            <footer class="footer">
+                <section class="container">
+                    <p><a class="twitter-follow-button" href="https://twitter.com/empaperem" data-size="large">Follow @empaperem</a></p> 
+                </section>
+            </footer>
+        </main>
+
+
+
+<div class="modal" style="display: none">
+<div class="modal-body">
+<div style="margin-bottom: 20px; width: 100%; text-align: right;">
+    <a href="#" id="tancar" style="font-size: 13px">X</a>
+</div>
+
+<form action="https://formspree.io/xjyvdvzm" method="POST">
+<input type="hidden" name="_subject" value="Nou formulari d'Empaperem" />
+<input type="hidden" name="_format" value="plain" />
+<input type="hidden" name="_next" value="/gracies" />
+    <input type="text" name="_gotcha" style="display: none">
+    <input type="text" placeholder="Municipi" name="municipi" required>
+    <input type="text" placeholder="Lloc" name="lloc" required>
+    <input type="text" placeholder="Dia i hora" name="dia_hora" required>
+
+    <input type="text" placeholder="Link" name="link" required>
+    <textarea placeholder="Comentaris" name="missatge"></textarea>
+    <button type="submit" style="width: 100%" id="enviar">Enviar!</button>
+</form>
+</div>
+</div>
+
+
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+        <script>
+        $(document).ready(function() {
+        $('#taulas').dataTable( {
+        "ajax": {
+        "url": "http://cors.io/?https://spreadsheets.google.com/feeds/list/1sa0MyF1JpxXftMLUYh9JP3e0hmjIFKWY2Mqhanw2wwU/od6/public/values?alt=json&callback=?",
+        "dataSrc": 'feed.entry',
+        },
+        "columns": [
+        { "data": "gsx$municipi.$t" },
+        { "data": "gsx$lloc.$t" },
+        { "data": null, "render": {
+        "_": "gsx$dia.$t",
+        "filter": "gsx$data.$t",
+        "display": "gsx$data.$t"
+        }},
+        { "data": "gsx$hora.$t" },
+        { "data": "gsx$apunts.$t", className: "only-desktop",
+        "fnCreatedCell": function (nTd, sData, oData, iRow, iCol) {
+        $(nTd).html("<a class='button button-small' href='"+sData+"'>+info</a>");
+        }
+        },
+                { "data": "gsx$missatge.$t", className: "only-mobile" },
+
+        ],
+        columnDefs: [ { orderable: false, targets: [1,3,4,5] }, { searchable: false, targets: [1,2,3,4,5] }],
+        "lengthChange": false,
+        "language": {
+        sProcessing: "Processant...",
+        sLengthMenu: "Mostra _MENU_ empaperades",
+        sZeroRecords: "No s'han trobat empaperades.",
+        sInfo: "Mostrant de _START_ a _END_ de _TOTAL_ empaperades",
+        sInfoEmpty: "Mostrant de 0 a 0 de 0 empaperades",
+        sInfoFiltered: "(filtrat de _MAX_ total empaperades)",
+        sInfoPostFix: "",
+        sSearch: "",
+        sLoadingRecords: "Carregant...",
+        sUrl: "",
+        searchPlaceholder: "Cerca per municipi",
+        oPaginate: {
+        sFirst: "Primer",
+        sPrevious: "Anterior",
+        sNext: "SegÃ¼ent",
+        sLast: "Ãšltim"
+        }
+        },
+        "pageLength": 100,
+        "paging": false,
+         "order": [[ 2, 'asc' ], [ 3, 'asc' ]]
+        } );
+        } );
+
+
+
+$("#buttonmodal").click(function(){
+    $(".modal").show();
+});
+
+$("#tancar, #enviar").click(function(){
+    $(".modal").hide();
+});
+
+
+$.getJSON( "http://cors.io/?https://spreadsheets.google.com/feeds/list/1sa0MyF1JpxXftMLUYh9JP3e0hmjIFKWY2Mqhanw2wwU/od6/public/values?alt=json&callback=?", function( json ) {
+$( "#comptador" ).html(json.feed.openSearch$totalResults.$t);
+$( "#compta" ).html(json.feed.openSearch$totalResults.$t);
+});
+
+        </script>
+    </body>
+</html>
